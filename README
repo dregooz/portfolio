@@ -1,3 +1,7 @@
-From the Subdirectories:
+To build:
 
-`$ parcel build --public-url '.' index.html`
+`$ node build`
+
+To deploy
+
+`$ firebase deploy`
