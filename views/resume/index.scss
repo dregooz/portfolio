@@ -1,0 +1,157 @@
+/*colors*/
+
+$yellow: #FEC324;
+$blue: #4CD5ED;
+$pink: #FF609B;
+$black: #000000;
+
+
+/* breakpoints */
+
+$max-tablet: 1118px;
+$max-tablet-small: 930px;
+$max-mobile: 590px;
+
+
+/* header - resume-only styling (same as home view) */
+
+.header {
+  
+  &.home-view {
+    display: block;
+
+    @media screen and (max-width: $max-tablet) {
+      padding: 10px 56px;
+    }
+
+    @media screen and (max-width: $max-mobile) {
+      padding: 10 16px;
+    }
+  }
+}
+
+
+/* resume */
+
+.resume {
+  padding: 168px 0;
+
+  .main-content {
+    max-width: 496px;
+
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      h4 {
+        margin-bottom: 8px;
+      }
+
+      .underline {
+        height: 4px;
+        width: 72px;
+        background-color: $yellow;
+        border-radius: 50px;
+
+        &.blue {
+          background-color: $blue;
+        }
+
+        &.pink {
+          background-color: $pink;
+        }
+
+        &.andrea-title {
+          margin-bottom: 3px;
+        }
+
+        &.background-title {
+          margin-top: 12px;
+        }
+      }
+
+      .tools-skills {
+        display: flex;
+        flex-direction: row;
+        margin-top: 116px;
+
+        @media screen and (max-width: $max-mobile) {
+            margin-top: 80px;
+          }
+
+        p {
+          margin-bottom: 4px;
+        }
+
+        .toolkit {
+          margin-right: 80px;
+
+          @media screen and (max-width: $max-mobile) {
+            margin-right: 40px;
+          }
+
+          .tools {
+            margin-top: 16px;
+          }
+        }
+
+        .skills {
+          margin-top: 16px;
+        }    
+      }
+
+      .background {
+        margin-top: 116px;
+
+        @media screen and (max-width: $max-mobile) {
+          margin-top: 80px;
+        }
+
+        .title-container {
+          text-align: center;
+          margin-bottom: 48px;
+
+          .underline {
+            margin-right: auto;
+            margin-left: auto;
+          }
+        }
+
+       li {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 700;
+
+          @media screen and (max-width: $max-tablet-small) {
+            font-size: 17px;
+            line-height: 26px;
+          }
+
+          @media screen and (max-width: $max-mobile) {
+            font-size: 16px;
+            line-height: 26px;
+          }
+        }
+
+        p {
+
+          &.timeframe {
+            font-style: italic;
+            margin-top: 4px;
+          }
+
+          &.description {
+            margin-top: 8px;
+            margin-bottom: 32px;
+          }
+        }
+      }
+    }
+  }
+}
