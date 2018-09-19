@@ -124,19 +124,7 @@ $max-mobile: 590px;
         }
 
        li {
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 700;
-
-          @media screen and (max-width: $max-tablet-small) {
-            font-size: 17px;
-            line-height: 26px;
-          }
-
-          @media screen and (max-width: $max-mobile) {
-            font-size: 16px;
-            line-height: 26px;
-          }
+          font-weight: 700;
         }
 
         p {

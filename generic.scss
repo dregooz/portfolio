@@ -1,3 +1,4 @@
+@import './third-party/css/modern-normalize.min.scss';
 
 /* colors */
 
@@ -132,7 +133,11 @@ button {
     }
   }
 
-  p {
+  ul {
+    padding-left: 1.2em;
+  }
+
+  p, li {
     font-size: 18px;
     line-height: 28px;
     font-weight: 400;
