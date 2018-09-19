@@ -49,6 +49,11 @@ a {
   color: $black;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
 .visible {
   display: block;
 }
