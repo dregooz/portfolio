@@ -9,7 +9,10 @@ _readDir('./views')
 .then(viewNames => {
   viewNames = viewNames.filter(viewName => viewName !== '.DS_Store');
 
-  viewNames.forEach(viewName => buildView(viewName));
+  return Promise.join(
+    fse.copy(`./assets`, `./dist/assets`),
+    Promise.map(viewNames, viewName => buildView(viewName))
+  );
 })
 .then(() => console.log('Build completed successfully.'))
 .catch(err => console.log(err));
@@ -20,15 +23,17 @@ function buildView(viewName) {
   return Promise.join(
     fse.copy(`./views/${viewName}/index.html`, `./dist/${viewName}/index.html`),
     fse.copy(`./index.js`, `./dist/${viewName}/index.js`),
-    fse.copy(`./views/${viewName}/assets`, `./dist/${viewName}/assets`),
-    _readDir(`./views/${viewName}`)
+    fse.copy(`./views/${viewName}/assets`, `./dist/${viewName}/assets`)
+  )
+  .then(() => {
+    return _readDir(`./views/${viewName}`)
     .then(files => {
       return Promise.map(files.filter(fileName => fileName.includes('.scss')), fileName => {
         return _sassToCss(`./views/${viewName}/${fileName}`)
         .then(css => _writeFile(`./dist/${viewName}`, fileName.replace(`scss`, `css`), css));
       });
-    })
-  );
+    });
+  });
 }
 
 
