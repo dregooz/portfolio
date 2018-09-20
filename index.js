@@ -2,7 +2,7 @@ const elements = {
   contentBegin: document.querySelector('.content-begin'),
   header: document.querySelector('.header'),
 
-  menu: document.querySelector('.menu'),
+  menus: Array.from(document.querySelectorAll('.menu')),
   nav: document.querySelector('nav'),
   navClose: document.querySelector('nav .close'),
 
@@ -21,8 +21,10 @@ window.addEventListener('scroll', event => {
   computeBackground();
 });
 
-elements.menu && elements.menu.addEventListener('click', event => {
-  toggleNav(true);
+elements.menus.forEach(menu => {
+  menu.addEventListener('click', event => {
+    toggleNav(true);
+  });
 });
 
 elements.navClose && elements.navClose.addEventListener('click', event => {
