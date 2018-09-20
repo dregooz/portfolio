@@ -16,7 +16,7 @@ $max-mobile: 590px;
 /* hero */
 
 .hero {
-  background-color:$mf-blue;
+  background-image: linear-gradient(0deg, #59A3CF 14%, #49C6F4 100%);
   color: $white;
   padding-top: 108px;
 
@@ -37,8 +37,12 @@ $max-mobile: 590px;
     }
 
     .hero-image {
-      width: 100%;
+      width: 80%;
       max-width: 1116px;
+
+      @media screen and (max-width: $max-tablet) {
+        width: 100%;
+      }
     } 
   }
 }

@@ -78,11 +78,6 @@ button {
     }
 
     @media screen and (max-width: $max-mobile) {
-      font-size: 48px;
-      line-height: 54px;
-    }
-
-    @media screen and (max-width: $max-mobile-small) {
       font-size: 40px;
       line-height: 44px;
     }

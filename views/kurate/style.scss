@@ -39,8 +39,12 @@ $max-mobile: 590px;
     }
 
     .hero-image {
-      width: 100%;
+      width: 80%;
       max-width: 1116px;
+
+      @media screen and (max-width: $max-tablet) {
+        width: 100%;
+      }
 
       @media screen and (max-width: $max-mobile) {
         display: none;

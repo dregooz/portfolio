@@ -5,17 +5,25 @@ const sass = require('node-sass');
 const fs = require('fs');
 const fse = require('fs-extra');
 
-_readDir('./views')
-.then(viewNames => {
-  viewNames = viewNames.filter(viewName => viewName !== '.DS_Store');
+const watch = require('watch');
 
-  return Promise.join(
-    fse.copy(`./assets`, `./dist/assets`),
-    Promise.map(viewNames, viewName => buildView(viewName))
-  );
-})
-.then(() => console.log('Build completed successfully.'))
-.catch(err => console.log(err));
+watch.watchTree('.', {
+  ignoreDotFiles: true,
+  filter: name => !name.match(/dist/),
+  interval: .2
+}, () => {
+   _readDir('./views')
+  .then(viewNames => {
+    viewNames = viewNames.filter(viewName => viewName !== '.DS_Store');
+
+    return Promise.join(
+      fse.copy(`./assets`, `./dist/assets`),
+      Promise.map(viewNames, viewName => buildView(viewName))
+    );
+  })
+  .then(() => console.log('Build completed successfully.'))
+  .catch(err => console.log(err));
+});
 
 
 
