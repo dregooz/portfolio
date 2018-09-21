@@ -66,16 +66,16 @@ $max-mobile: 590px;
 .about {
   padding: 156px 0;
 
-  @media screen and (max-width: $max-tablet) {
-    padding: 108px 0;
+ @media screen and (max-width: $max-tablet) {
+    padding: 108px 0 116px 0;
   }
 
   @media screen and (max-width: $max-tablet-small) {
-    padding: 72px 0; 
+    padding: 72px 0 96px 0;
   }
 
   @media screen and (max-width: $max-mobile) {
-    padding: 44px 0;
+    padding: 44px 0 72px 0;
   }
 
   .main-padding { 
@@ -179,15 +179,15 @@ $max-mobile: 590px;
   padding: 156px 0;
 
   @media screen and (max-width: $max-tablet) {
-    padding: 108px 0;
+    padding: 116px 0 108px 0;
   }
 
   @media screen and (max-width: $max-tablet-small) {
-    padding: 72px 0; 
+    padding: 96px 0 72px 0;
   }
 
   @media screen and (max-width: $max-mobile) {
-    padding: 44px 0;
+    padding: 72px 0 56px 0;
   }
 
   .flex-container {
@@ -211,16 +211,16 @@ $max-mobile: 590px;
       flex: 1 1 0;
 
       @media screen and (max-width: $max-tablet) {
-        margin-top: 88px;
+        margin-top: 96px;
         text-align: center;
       }
 
       @media screen and (max-width: $max-tablet-small) {
-        margin-top: 64px;
+        margin-top: 72px;
       }
 
       @media screen and (max-width: $max-mobile) {
-        margin-top: 44px;
+        margin-top: 56px;
       }
 
       img {
@@ -254,7 +254,7 @@ $max-mobile: 590px;
   }
 
   @media screen and (max-width: $max-mobile) {
-    padding: 44px 0;
+    padding: 56px 0;
   }
 
   .flex-container {
@@ -270,12 +270,12 @@ $max-mobile: 590px;
     margin-right: 16%;
 
       @media screen and (max-width: $max-tablet-small) {
-        margin-top: 88px;
+        margin-top: 72px;
         margin-right: 0;
         text-align: center;
 
          @media screen and (max-width: $max-mobile) {
-          margin-top: 48px;
+          margin-top: 56px;
         }
       }
 
@@ -309,7 +309,7 @@ $max-mobile: 590px;
   }
 
   @media screen and (max-width: $max-mobile) {
-    padding: 44px 0;
+    padding: 56px 0;
   }
 
   .flex-container {
@@ -319,7 +319,7 @@ $max-mobile: 590px;
 
     .description {
       max-width: 534px;
-      margin-bottom: 88px;
+      margin-bottom: 96px;
 
       @media screen and (max-width: $max-tablet) {
         margin-bottom: 56px;
@@ -349,12 +349,12 @@ $max-mobile: 590px;
 
   @media screen and (max-width: $max-tablet-small) {
     padding-top: 72px;
-    padding-bottom: 696px;
+    padding-bottom: 708px;
   }
 
   @media screen and (max-width: $max-mobile) {
-    padding-top: 44px;
-    padding-bottom: 596px;
+    padding-top: 56px;
+    padding-bottom: 608px;
   }
 
   .flex-container {
@@ -437,7 +437,7 @@ $max-mobile: 590px;
   }
 
   @media screen and (max-width: $max-mobile) {
-    padding: 44px 0;
+    padding: 56px 0;
   }
 
   .flex-container {
@@ -447,9 +447,17 @@ $max-mobile: 590px;
 
     .description {
       max-width: 534px; 
-      margin-bottom: 108px;
+      margin-bottom: 132px;
 
       @media screen and (max-width: $max-tablet) {
+        margin-bottom: 96px;
+      }
+
+      @media screen and (max-width: $max-tablet-small) {
+        margin-bottom: 72px;
+      }
+
+      @media screen and (max-width: $max-mobile) {
         margin-bottom: 56px;
       }
     }

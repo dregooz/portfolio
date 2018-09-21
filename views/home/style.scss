@@ -128,6 +128,16 @@ $max-mobile: 590px;
               line-height: 18px;
               font-weight: 400;
               margin-bottom: 16px;
+
+              &.mobile-description {
+                display: none;
+
+                @media screen and (max-width: $max-mobile) {
+                  display: block;
+                  line-height: 26px;
+                  margin-bottom: 0;
+                }
+              }
             }
 
             li {
@@ -136,10 +146,17 @@ $max-mobile: 590px;
               font-weight: 400;
               padding-left:12px;
               margin-bottom: 24px;
+
+              &.default-description {
+
+                @media screen and (max-width: $max-mobile) {
+                  display: none;
+                }
+              }
             }
 
             ol {
-              padding-left: 18px;
+              padding-left: 16px;
             }
           }
         }

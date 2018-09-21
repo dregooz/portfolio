@@ -19,7 +19,12 @@ watch.watchTree('.', {
     return Promise.join(
       fse.copy(`./assets`, `./dist/assets`),
       Promise.map(viewNames, viewName => buildView(viewName))
-    );
+    )
+    .then(() => {
+      return Promise.join(
+        fse.copy(`./favicon`, `./dist/assets/favicon`)
+      );
+    });
   })
   .then(() => console.log('Build completed successfully.'))
   .catch(err => console.log(err));
@@ -31,7 +36,8 @@ function buildView(viewName) {
   return Promise.join(
     fse.copy(`./views/${viewName}/index.html`, `./dist/${viewName}/index.html`),
     fse.copy(`./index.js`, `./dist/${viewName}/index.js`),
-    fse.copy(`./views/${viewName}/assets`, `./dist/${viewName}/assets`)
+    fse.copy(`./views/${viewName}/assets`, `./dist/${viewName}/assets`),
+    fse.copy(`./favicon/favicon.ico`, `./dist/${viewName}/favicon`)
   )
   .then(() => {
     return _readDir(`./views/${viewName}`)

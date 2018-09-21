@@ -230,7 +230,7 @@ button {
 }
 
 
-/* nav menu expanded */
+/* side nav menu expanded */
 
 nav {
   height: 100%;
@@ -239,13 +239,12 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
-  padding: 24px 32px 0 32px;
+  padding: 24px 40px;
   background-color: $black;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   display: none;
- 
 
   .close {
     float: right;
@@ -253,17 +252,20 @@ nav {
 
   .links-container { 
     margin-top: 72px;
-  
+
     a {
       color: $white;
       display: block;
-      margin: 28px 0;
+      padding: 16px 0;
 
-      &.border {
-        padding-bottom: 48px;
-        border-bottom: solid $white 1px;
-        margin-bottom: 48px;
+      &.hover:hover {
+        font-size: 19px;
       }
+    } 
+
+    hr {
+      border: solid 1px $white;
+      margin: 28px 0;
     }
   }
 } 
