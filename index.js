@@ -1,4 +1,5 @@
 const elements = {
+  body: document.querySelector('body'),
   contentBegin: document.querySelector('.content-begin'),
   header: document.querySelector('.header'),
 
@@ -23,6 +24,7 @@ window.addEventListener('scroll', event => {
 
 elements.menus.forEach(menu => {
   menu.addEventListener('click', event => {
+    event.stopPropagation();
     toggleNav(true);
   });
 });
@@ -34,6 +36,14 @@ elements.navClose && elements.navClose.addEventListener('click', event => {
 elements.scrollToTop && elements.scrollToTop.addEventListener('click', event => {
   event.preventDefault();
   window.scrollTo(100, 0);
+});
+
+elements.body.addEventListener('click', event => {
+  toggleNav(false);
+});
+
+elements.nav.addEventListener('click', event => {
+  event.stopPropagation();
 });
 
 

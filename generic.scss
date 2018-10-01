@@ -55,6 +55,7 @@ button {
   background-color: transparent;
   cursor: pointer;
   outline: none;
+  padding: 0;
 }
 
 .visible {
@@ -155,6 +156,13 @@ button {
   }
 }
 
+.footer {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  margin-top: 12px;
+}
+
 .center-text {
   text-align: center;
 }
@@ -239,19 +247,24 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
-  padding: 24px 40px;
+  padding: 24px;
   background-color: $black;
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   display: none;
 
+  @media screen and (max-width: $max-mobile) {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
   .close {
     float: right;
   }
 
   .links-container { 
-    margin-top: 72px;
+    margin-top: 56px;
 
     a {
       color: $white;
@@ -265,7 +278,7 @@ nav {
 
     hr {
       border: solid 1px $white;
-      margin: 28px 0;
+      margin: 18px 0;
     }
   }
 } 

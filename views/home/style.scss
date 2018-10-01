@@ -114,6 +114,10 @@ $max-mobile: 590px;
               .github {
                 margin-right: 24px;
               }
+
+              @media screen and (max-width: $max-mobile) {
+                margin-top: 16px;
+              }
             }
 
             h1 {
