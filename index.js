@@ -1,5 +1,5 @@
 const elements = {
-  body: document.querySelector('body'),
+  html: document.querySelector('html'),
   contentBegin: document.querySelector('.content-begin'),
   header: document.querySelector('.header'),
 
@@ -38,7 +38,7 @@ elements.scrollToTop && elements.scrollToTop.addEventListener('click', event => 
   window.scrollTo(100, 0);
 });
 
-elements.body.addEventListener('click', event => {
+elements.html.addEventListener('click', event => {
   toggleNav(false);
 });
 

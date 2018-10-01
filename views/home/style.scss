@@ -15,6 +15,13 @@ $max-tablet-small: 930px;
 $max-mobile: 590px;
 
 
+/* body - home-only styling */
+
+body {
+  padding-top: 124px;
+}
+
+
 /* header - home-only styling */
 
 .header {
@@ -36,8 +43,6 @@ $max-mobile: 590px;
 /* about me */
 
 .about-me {
-  margin-top: 124px;
-
   @media screen and (max-width: $max-tablet-small) {
     margin-top: 120px;
   }
