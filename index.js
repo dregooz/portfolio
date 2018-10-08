@@ -15,11 +15,11 @@ const state = {
   isShowingNav: false
 };
 
-computeBackground();
+computeHeaderBackgroundVisibility();
 
 
 window.addEventListener('scroll', event => {
-  computeBackground();
+  computeHeaderBackgroundVisibility();
 });
 
 elements.menus.forEach(menu => {
@@ -55,12 +55,14 @@ function hideBackground() {
   elements.header.classList.remove('highlighted');
 }
 
-function computeBackground() {
+function computeHeaderBackgroundVisibility() {
   const computedStyle = window.getComputedStyle(elements.contentBegin);
   const marginTop = Number(computedStyle.marginTop.replace('px', ''));
   const top = elements.contentBegin.getBoundingClientRect().y - marginTop;
 
-  if (top < 0) {
+  const start = Number(window.getComputedStyle(elements.header).height.replace('px', ''));
+
+  if (top < start) {
     if (state.isShowingBackground === true) return;
     showBackground();
     state.isShowingBackground = true;

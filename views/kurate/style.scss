@@ -211,7 +211,6 @@ $max-mobile: 590px;
       flex: 1 1 0;
 
       @media screen and (max-width: $max-tablet) {
-        margin-top: 96px;
         text-align: center;
       }
 
@@ -226,12 +225,16 @@ $max-mobile: 590px;
       img {
         width: 90%;
 
-        @media screen and (max-width: $max-tablet-small) {
-          width: 55%;
+        @media screen and (max-width: $max-tablet) {
+          width: 100%;
+        }
+
+         @media screen and (max-width: $max-tablet-small) {
+          width: 65%;
         }
 
         @media screen and (max-width: $max-mobile) {
-          width: 70%;
+          width: 100%;
         }
       }
     }
@@ -280,7 +283,7 @@ $max-mobile: 590px;
       }
 
       img {
-        width: 85%;
+        width: 90%;
 
         @media screen and (max-width: $max-tablet-small) {
           width: 60%;
@@ -513,9 +516,10 @@ $max-mobile: 590px;
 
       .image {
         flex: 1 1 30%;
+        margin-bottom: 2.6%;
 
         img {
-          width: 100%;
+          width: 93%;
         }
       }
     }

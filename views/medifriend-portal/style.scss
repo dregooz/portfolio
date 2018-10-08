@@ -166,57 +166,54 @@ $max-mobile: 590px;
 /* section 1 */
 
 .sec-1 {
-  padding: 156px 0;
+  padding: 224px 0;
 
   @media screen and (max-width: $max-tablet) {
-    padding: 116px 0 108px 0;
+    padding: 128px 0;
   }
 
   @media screen and (max-width: $max-tablet-small) {
-    padding: 96px 0 72px 0;
+    padding: 92px 0; 
   }
 
   @media screen and (max-width: $max-mobile) {
-    padding: 72px 0 56px 0;
+    padding: 56px 0;
   }
 
   .flex-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
 
-    .description {
-      max-width: 534px;
-      margin-bottom: 132px;
-
-      @media screen and (max-width: $max-tablet) {
-        margin-bottom: 96px;
-      }
-
-      @media screen and (max-width: $max-tablet-small) {
-        margin-bottom: 72px;
-      }
-
-        @media screen and (max-width: $max-mobile) {
-        margin-bottom: 56px;
-      }
+    @media screen and (max-width: $max-tablet-small) {
+      flex-direction: column;
     }
 
     .image {
-      text-align: center;
+    flex: 1 1 0;
+    margin-left: 16%;
 
-      img {
-        width: 100%;
+      @media screen and (max-width: $max-tablet-small) {
+        margin-top: 72px;
+        margin-left: 0;
+        text-align: center;
 
-        @media screen and (max-width: $max-tablet) {
-          width: 90%;
-        }
-
-        @media screen and (max-width: $max-tablet-small) {
-          width: 100%;
+         @media screen and (max-width: $max-mobile) {
+          margin-top: 56px;
         }
       }
-    } 
+
+      img {
+        width: 80%;
+
+        @media screen and (max-width: $max-tablet-small) {
+          width: 60%;
+        }
+      }
+    }
+
+    .description {
+      flex: 1 1 0;
+    }
   }
 }
 

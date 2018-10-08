@@ -208,14 +208,10 @@ $max-mobile: 590px;
       text-align: center;
 
       img {
-        width: 100%;
-
-        @media screen and (max-width: $max-tablet) {
-          width: 90%;
-        }
+        width: 90%;
 
         @media screen and (max-width: $max-tablet-small) {
-          width: 100%;
+          width: 60%;
         }
       }
     } 

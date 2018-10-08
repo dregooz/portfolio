@@ -156,13 +156,6 @@ button {
   }
 }
 
-.footer {
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
-  margin-top: 12px;
-}
-
 .center-text {
   text-align: center;
 }
@@ -238,16 +231,16 @@ button {
 }
 
 
-/* side nav menu expanded */
+/* side nav menu */
 
 nav {
   height: 100%;
   z-index: 1000;
-  width: 284px;
+  width: 332px;
   position: fixed;
   top: 0;
   right: 0;
-  padding: 24px;
+  padding: 32px;
   background-color: $black;
   font-weight: 400;
   font-size: 18px;
@@ -257,6 +250,7 @@ nav {
   @media screen and (max-width: $max-mobile) {
     font-size: 17px;
     line-height: 17px;
+    width: 284px;
   }
 
   .close {
@@ -264,7 +258,7 @@ nav {
   }
 
   .links-container { 
-    margin-top: 56px;
+    margin-top: 32px;
 
     a {
       color: $white;
@@ -284,22 +278,10 @@ nav {
 } 
 
 
-/* process hr bar */
+/* decorative hr */
 
-.process {
+.decorative-hr {
  width: 100%;
-
-  h2 {
-    padding: 96px 0;
-
-    @media screen and (max-width: $max-tablet) {
-      padding: 56px 0;
-    }
-
-    @media screen and (max-width: $max-mobile) {
-      padding: 20px 0;
-    }
-  }
 
   .hr {
     height: 4px;
@@ -307,7 +289,7 @@ nav {
     border-radius: 50px;
 
     &.margin {
-      margin: 12px 0;
+      margin-bottom: 12px;
     }
 
     &.mf-blue {
